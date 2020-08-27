@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Saludo from './components/Saludo';
+import Comentario from './components/Comentario';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<div className='container mt-5'>
+			<h1>Props</h1>
+			<Saludo persona='Giovanni' edad={23} />
+			<Saludo persona='Juan' edad={21} />
+			<Saludo persona='Roman  ' edad={15} />
+			<hr />
+			<h3>Caja de comentarios</h3>
+			<Comentario
+				urlImagen='https://picsum.photos/100'
+				persona='Giovanni'
+				texto='lorem ipsum ndlreo med'
+			/>
+			<Comentario
+				urlImagen='https://picsum.photos/100'
+				persona='Juan'
+				texto='lorem lreom ipsum ndlreo medi '
+			/>
+			<Comentario
+				urlImagen='https://picsum.photos/100'
+				persona='Roman'
+				texto='ipsum lorem ipsum ndlreo med'
+			/>
+		</div>
+	);
+};
 
 export default App;
